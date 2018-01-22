@@ -1,0 +1,21 @@
+ID Date Author Problem Language Judgement result Test # Execution time Memory used 
+1915451 20:10:17
+24 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 
+1915450 20:09:20
+24 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.546 219 KB 
+1915448 20:08:50
+24 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.546 219 KB 
+1915447 20:08:20
+24 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 
+1915444 20:07:29
+24 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 
+1915881 12:01:21
+25 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 
+1915880 12:00:57
+25 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 
+1915879 12:00:20
+25 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 
+1915876 11:59:16
+25 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 
+1915872 11:57:54
+25 Dec 2007 testfor1099 1099 Pascal Time limit exceeded 59 0.515 219 KB 

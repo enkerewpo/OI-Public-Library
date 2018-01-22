@@ -1,0 +1,38 @@
+
+<BODY BGCOLOR="#ffffff" LINK ="#078c52" ALINK ="#078c52" VLINK = "#e64204" >
+
+<h1>1995 USACO Final Round</h1>
+<h2> Day 1, June 1, 1995</h2>
+
+<h3>Problem 1:  Cows on Parade</h3>
+<pre>
+Farmer John was marching 19 of his finest black Angus and white Jersey
+cows to market the other day when his wife, Farmeress Joanne, noticed
+that all 16 possible combinations of four successive black and white
+cows (e.g., bbbb, bbbw, bbwb, bbww, ..., wwww) were present (as
+contiguous cow-subsequences) as the parade passed by.  Of course, some
+of the combinations overlapped others.
+
+Part 1:  Print any ordering of 19 marching black and white cows that
+contains all the possible four-color combinations.
+
+Part 2:  Accept as console input the number of cows and the length of
+the subsequence and print any ordering of the cows that contains all
+the possible color combinations.  Typical lengths and subsequences
+are:  2,5; 3,10; 4,19; 5,36 and more.  The number of cows will not
+exceed 32,782 and the length of the subsequence will not exceed 15.  It
+is guaranteed that a solution will exist.  Your program must run in
+less than 30 seconds.
+
+[Charley Ashbacher; JRM 25:4 p299 '93]
+
+</pre>
+<hr>
+
+
+
+</body>
+
+
+
+

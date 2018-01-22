@@ -1,0 +1,31 @@
+ID Date Author Problem Language Judgement result Test # Execution time Memory used 
+1915439 20:04:02
+24 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.156 219 KB 
+1915438 20:02:55
+24 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.14 219 KB 
+1915433 20:01:11
+24 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.14 219 KB 
+1915430 20:00:39
+24 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.156 219 KB 
+1915428 20:00:01
+24 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.156 219 KB 
+1915830 11:15:31
+25 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.156 219 KB 
+1915829 11:15:13
+25 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.14 219 KB 
+1915828 11:14:54
+25 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.14 219 KB 
+1915827 11:14:33
+25 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.14 219 KB 
+1915826 11:14:19
+25 Dec 2007 testfor1099 1099 Pascal Accepted 
+ 0.156 219 KB 
