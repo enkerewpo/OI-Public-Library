@@ -1,8 +1,8 @@
-*.1 linguist-language=c++
-*.2 linguist-language=c++
-*.3 linguist-language=c++
-*.4 linguist-language=c++
-*.5 linguist-language=c++
-*.6 linguist-language=c++
-*.7 linguist-language=c++
-*.8 linguist-language=c++
+*.1 linguist-language=cplusplus
+*.2 linguist-language=cplusplus
+*.3 linguist-language=cplusplus
+*.4 linguist-language=cplusplus
+*.5 linguist-language=cplusplus
+*.6 linguist-language=cplusplus
+*.7 linguist-language=cplusplus
+*.8 linguist-language=cplusplus
