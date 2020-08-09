@@ -1,0 +1,4 @@
+ABAC
+DCDE
+BEBC
+CADE

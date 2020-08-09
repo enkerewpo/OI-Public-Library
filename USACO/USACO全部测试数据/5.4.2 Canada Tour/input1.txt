@@ -1,0 +1,18 @@
+8 9
+Vancouver
+Yellowknife
+Edmonton
+Calgary
+Winnipeg
+Toronto
+Montreal
+Halifax
+Vancouver Edmonton
+Vancouver Calgary
+Calgary Winnipeg
+Winnipeg Toronto
+Toronto Halifax
+Montreal Halifax
+Edmonton Montreal
+Edmonton Yellowknife
+Edmonton Calgary

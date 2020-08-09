@@ -1,0 +1,200 @@
+/* Prob #3: The Errant Physicist */
+/*
+Wed Jan 19 13:17:15 EST 2000
+Wed Jan 19 13:42:20 EST 2000
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+FILE *fout, *fin;
+
+typedef short term_set[100][3];
+
+int terms[201][201];
+
+term_set term1; /* coeff, xpow, ypow */
+term_set term2; /* coeff, xpow, ypow */
+
+char output[2][5000];
+int opos;
+
+int read_term(term_set *term)
+ {
+  char str[100];
+  int state; /* 0 => coeff, 1 => xpow, 2 => ypow */
+  int sign, val;
+  int n, pos;
+  if (fscanf (fin, "%s", str) != 1)
+    return -1;
+  state = 0;
+  sign = 1;
+  val = 0;
+  n = 0;
+  pos = 0;
+  for (pos = 0; str[pos]; pos++)
+   {
+    switch (str[pos])
+     {
+    case 'x':
+      if (val == 0) val++;
+      (*term)[n][state] = val *sign;
+      state = 1;
+      sign = 1;
+      val = 0;
+      break;
+    case 'y':
+      if (val == 0) val++;
+      (*term)[n][state] = val*sign;
+      state = 2;
+      sign = 1;
+      val = 0;
+      break;
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '7':
+    case '8':
+    case '9':
+      val = 10*val + str[pos] - '0';
+      break;
+    case '-':
+      if (val != 0 || state != 0)
+       {
+        if (val == 0) val++;
+        (*term)[n][state] = val*sign;
+       } else n--;
+      sign = -1;
+      val = 0;
+      state = 0;
+      n++;
+      break;
+    case '+':
+      if (val == 0) val++;
+      (*term)[n][state] = val*sign;
+      sign = 1;
+      val = 0;
+      state = 0;
+      n++;
+      break;
+     }
+   }
+  if (val == 0) val++;
+  (*term)[n][state] = val*sign;
+  n++;
+  return n;
+ }
+
+void finish_strings(void)
+ {
+  int lv;
+  for (lv = opos; output[0][lv-1] == ' ' && lv > 0; lv--);
+  output[0][lv] = '\0';
+  for (lv = opos; output[1][lv-1] == ' ' && lv > 0; lv--);
+  output[1][lv] = '\0';
+ }
+
+void add_int(int num, int str)
+ {
+  int len;
+  sprintf (output[str]+opos, "%i", num);
+  len = strlen(output[str]+opos);
+  for (; len > 0; len--)
+    output[1-str][opos++] = ' ';
+ }
+
+void add_char(char ch, int str)
+ {
+  output[str][opos] = ch;
+  output[1-str][opos++] = ' ';
+ }
+
+int main(int argc, char **argv)
+ {
+  char string[100];
+  int nterm1, nterm2;
+  int state;
+  int lv, lv2;
+
+  if (argc == 1) 
+   {
+    if ((fin = fopen("poly1.in", "r")) == NULL)
+     {
+      perror ("fopen fin");
+      exit(1);
+     }
+    if ((fout = fopen("poly1.out", "w")) == NULL)
+     {
+      perror ("fopen fout");
+      exit(1);
+     }
+   } else {
+    if ((fin = fopen(argv[1], "r")) == NULL)
+     {
+      perror ("fopen fin filename");
+      exit(1);
+     }
+    fout = stdout;
+   }
+
+  while (1)
+   {
+    nterm1 = read_term(&term1);
+    if (nterm1 < 0) break;
+    nterm2 = read_term(&term2);
+    memset(terms, 0, sizeof(terms));
+    for (lv = 0; lv < nterm1; lv++)
+      for (lv2 = 0; lv2 < nterm2; lv2++)
+       {
+        terms[term1[lv][1]+term2[lv2][1]][term1[lv][2]+term2[lv2][2]] +=
+	   term1[lv][0] * (int)term2[lv2][0];
+       }
+    state = 0;
+    for (lv = 200; lv >= 0; lv--)
+     {
+      for (lv2 = 0; lv2 <= 200; lv2++)
+       {
+        if (terms[lv][lv2] != 0)
+	 {
+	  if (state == 1)
+	   {
+	    add_char(' ', 0);
+	    if (terms[lv][lv2] < 0)
+	      add_char('-', 1);
+	    else
+	      add_char('+', 1);
+	    add_char(' ', 0);
+	   }
+	  else
+	   {
+	    if (terms[lv][lv2] < 0)
+	      add_char('-', 1);
+	    state = 1;
+	   }
+	  if (abs(terms[lv][lv2]) != 1 || (lv == 0 && lv2 == 0))
+	    add_int(abs(terms[lv][lv2]), 1);
+	  if (lv != 0)
+	   {
+	    add_char('x', 1);
+	    if (lv != 1)
+	      add_int(lv, 0);
+	   }
+	  if (lv2 != 0)
+	   {
+	    add_char('y', 1);
+	    if (lv2 != 1)
+	      add_int(lv2, 0);
+	   }
+	 }
+       }
+     }
+    finish_strings();
+    fprintf (fout, "%s\n", output[0]);
+    fprintf (fout, "%s\n", output[1]);
+    opos = 0;
+   }
+ }

@@ -1,0 +1,10 @@
+mitnik 2923
+Poulsen 557
+Tanner 128
+Stallman -311
+Ritchie -1777
+Baran 245
+Spafford -1997
+Farmer 440
+Venema 391
+Linus -599
