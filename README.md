@@ -1,5 +1,5 @@
 # OI Public Library
-![](https://img.shields.io/badge/OI-Public%20Library-orange)
+![](https://img.shields.io/badge/Olympiad%20in%20Informatics-Public%20Library-orange)
 
 ![](https://img.shields.io/github/forks/enkerewpo/OI-Public-Library?label=Fork&style=social)
 ![](https://img.shields.io/github/stars/enkerewpo/OI-Public-Library?style=social)
